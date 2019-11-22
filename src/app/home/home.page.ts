@@ -220,7 +220,14 @@ export class HomePage implements OnInit {
             this.presentToast('Error while reading file.');
         });
 }
- 
+ uploadMultiple(){
+   this.files.forEach(item=>{
+    console.log(`uploadMultiple ${JSON.stringify(item)}`);
+   this.startUpload(item);
+   console.log(`uploadMultiple ${JSON.stringify(item)}`);
+   })
+  
+ }
 readFile(file: any) {
     const reader = new FileReader();
     reader.onloadend = () => {
