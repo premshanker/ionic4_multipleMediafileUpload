@@ -247,7 +247,7 @@ async uploadImageData(formData: FormData) {
     });
     await loading.present();
  
-    this.http.post("http://103.133.215.102/~aagamits/test2/upload.php", formData)
+    this.http.post("http://103.133.215.102/~aagamits/gemzkart/", formData)
         .pipe(
             finalize(() => {
                 loading.dismiss();
